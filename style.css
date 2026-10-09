@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    font: inherit;
+}
+
+#app {
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.topbar {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.transport {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transport button {
+    border: 1px solid #444;
+    background: #1c1c1c;
+    color: #eee;
+    border-radius: 6px;
+    padding: 7px 14px;
+    cursor: pointer;
+}
+
+.transport button:hover {
+    background: #292929;
+}
+
+.transport-info {
+    margin-left: 12px;
+    color: #999;
+    font-size: 14px;
+}
+
+.section-title {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    align-items: start;
+    gap: 20px;
+}
+
+.workspace-main {
+    min-width: 0;
+}
+
+#chordControls {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#chordButtons {
+    flex-wrap: wrap;
+}
+
+#chordButtons button {
+    padding: 10px 16px;
+    color: #eee;
+    background: #1c1c1c;
+    border: 1px solid #383838;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#chordButtons button:hover {
+    background: #303030;
+    border-color: #666
+}
+
+#chordProperties {
+    min-width: 0;
+    padding: 18px;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+#selectedChordTitle {
+    margin-bottom: 22px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.property-heading {
+    margin-bottom: 10px;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+#selectedVoicing {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+#voicingNotes {
+    display: block;
+}
+
+#voicingNotes .voicing-card {
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+
+#voicingNotes .voicing-card strong {
+    display: none;
+}
+
+#voicingNotes .voicing-card span {
+    display: block;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 2;
+}
+
+#chordAlterations {
+    padding-top: 20px;
+}
+
+.property-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.property-row input {
+    margin-top: 3px;
+    accent-color: #b5a0ff;
+}
+
+.property-description {
+    display: block;
+    margin-top: 4px;
+    color: #888;
+    font-size: 12px;
+}
+
+@media (max-width: 850px) {
+    .workspace {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #chordProperties {
+        width: 100%;
+    }
+}
