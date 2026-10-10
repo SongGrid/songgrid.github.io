@@ -1,5 +1,15 @@
 import { mountSongEditor } from "./SongEditor/songeditor.js";
 
+const redirectedRoute = new URLSearchParams(window.location.search).get("route");
+
+if (redirectedRoute) {
+    history.replaceState(
+        null,
+        "",
+        redirectedRoute
+    );
+}
+
 const appRoot = document.querySelector("#app");
 
 let unmountCurrentPage = null;
